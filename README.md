@@ -1,58 +1,24 @@
-# OPENDATAHUB - PUBLIC DATA PLATFORM
-A comprehensive web platform that serves as the gateway to the OPENDATAHUB ecosystem, providing access to public datasets.
+<!--
+SPDX-FileCopyrightText: NOI Techpark <digital@noi.bz.it>
 
-## **Features**
-- **Data Browser** - Intuitive web interface for browsing, searching and exploring public datasets with advanced filtering and preview capabilities.
+SPDX-License-Identifier: CC0-1.0
+-->
 
-- **Web Components** - Ready-to-use library of web components for seamless integration of OPENDATAHUB datasets into applications.
+# project-landingpage
 
-- **Analytics** - Interactive charts and dashboards for visualizing and monitoring live data insights.
+Static web pages of NOI Techpark projects. Each project lives in its own folder and is deployed to its own S3 bucket by the GitHub Actions workflow on every push to `main`.
 
-- **Data Quality** - Comprehensive tools for monitoring dataset health, completeness and reliability.
+| Folder | Bucket | URL |
+| --- | --- | --- |
+| `src/impact/` | `prod-impact-landingpage` | https://impact.digital.noi.bz.it |
+| `src/mentor/` | `prod-mentor-landingpage` | https://journey.mentor.digital.noi.bz.it |
 
-- **STUART Chatbot** - AI-powered assistant using LLM models to provide customer support using platform documentation and GitHub issues.
+## Adding a project
 
-- **ePaper Backend** - Digital signage solution displaying real-time event data on ePaper totems.
+1. Add a folder under `src/` with the static site.
+2. Add an entry to the `deploy` matrix in `.github/workflows/main.yaml`.
+3. Create the bucket and the proxy rule in the infrastructure repository.
 
-- **Flight Data Components** - Real-time flight status updates and booking integration.
+## License
 
-- **Data Catalog API** - Standards-compliant API(ODPS and DCAT) exposing dataset information.
-
-## Tech Stack
-- HTML5, CSS3
-
-## **Making Changes**
-1. ***Clone repository***
-```
-    git clone https://github.com/noi-techpark/
-    cd 
-```
-
-2. ***Serve locally***
-```
-    # Using python
-    python -m http.server 3000
-
-    # Using Node.js
-    npx serve .
-
-    # Using PHP
-    php -S localhost:3000
-```
-
-3. ***Open in browser Navigate to*** ```http://localhost:3000```
-
-4. ***Create a feature branch***
-```
-    git checkout -b feature/new-feature
-```
-
-5. ***Make changes***
-    - Follow the existing code style
-    - Update README if necessary
-
-6. ***Commit changes***
-
-7. ***Push to new branch***
-
-8. ***Open a PR***
+AGPL-3.0-or-later, see [LICENSE](LICENSE). The project is [REUSE](https://reuse.software) compliant.
